@@ -1,0 +1,591 @@
+/* ********* GENERAL APPLICATION CSS ************ */
+
+*,html,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+ul,a,li, p{
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 1.5px;
+    
+}
+
+/* **********  NAVIGATION BAR SECTION    *************** */
+
+.navbar{
+    background-color: #f5f8f6;
+    height: 6rem;
+    opacity: 0.75;
+    position:fixed;
+    width: 100%;
+    z-index: 10000;
+}
+.navlist{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-top: 0.4rem;
+    opacity: 1.5;
+    
+}
+/* .logo-wrap{
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+} */
+.item-wrap{
+    display: flex;
+    flex-wrap: wrap;
+    width: 40%;
+    /* flex-wrap: wrap; */
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo{
+    height: 3.3rem;
+    margin-top: 0.5rem;
+    padding-top: 0.4rem;
+    border: 0.1rem solid rgba(0, 0, 0, 0.164);
+    border-radius: 50rem;
+    
+    
+}
+.navitem{
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #f48c06;
+    font-family: 'Bebas Neue', sans-serif;
+    transition: all 0.35s ease-in-out;
+    margin: 0.5 0.1rem;
+}
+
+.navitem:hover{
+    color: #b46000;
+    text-decoration: underline;
+    transform: scale(1.3);
+}
+
+.logo-full span{
+    /* content: 'KC'; */
+    color: #ff5f03;
+    font-size: 4rem;
+    font-weight: bold;
+    font-family: 'Tilt Prism', cursive;
+    transition: color 0.35s ease;
+}
+.logo-full:hover{
+    color: #ae2012;
+    text-decoration: none;
+}
+
+.navbar input[type=checkbox], .hamburger-lines{
+    display: none;
+}
+
+
+
+/* *********    BUTTON SECTION      ************** */
+
+.btn{
+    /* text-transform: uppercase; */
+    font-size: 1.6rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding: 0.7rem 1.5rem;
+    border: 0.2rem solid none;
+    border-radius: 5rem;
+    background-color: #f48c06;
+    color: aliceblue;
+    transition: all 0.35s ease-in-out;
+}
+.btn:hover{
+    background-color: #023047;
+    text-decoration: none;
+    color: white;
+    transform: scale(1.02);
+    
+    /* border: 0.3rem solid #023047; */
+}
+
+
+
+
+
+/* *********** SHOWCASE AREA sECTION ************** */
+
+.showcase-area{
+    background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url('./images/homebackground.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 90vh;
+    width: 100vw;
+    z-index: -1000;
+    opacity: 0.8;
+}
+.showcase-container{
+    height: 100%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-120%, -120%);
+    animation: slide 0.5s ease-in-out forwards;
+}
+
+@keyframes slide{
+    100%{
+        transform: translateX(0%);
+    }
+}
+.welcome{
+    font-size: 4rem;
+    font-family: 'Lobster', cursive;
+    font-weight: 300;
+    color: #ff8700;
+    text-align: center;
+}
+.para{
+    font-size: 7rem;
+    font-family: 'Abril Fatface', cursive;;
+    animation: appear 1s ease-in forwards;
+    text-align: center;
+}
+
+@keyframes appear {
+    50%{
+        opacity: 0.6;
+        color: #ff8700;
+        /* opacity: 0.5; */
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.desc{
+    font-family: 'Lobster', cursive;
+    font-size: 2rem;
+    font-weight: 100;
+    color: #ff8700;
+    text-align: center;
+
+}
+.button{
+    margin-top: 2.5rem;
+}
+
+/* ****************  ALL SECTION INDEPENDENT CSS    ********** */
+.sec{
+    margin: 3rem 0;
+}
+.section-header{
+    text-align: center;
+    font-size: 4rem;
+    font-family: 'Abril Fatface', cursive;
+    letter-spacing: 2px;
+    color: #e67a00;
+}
+
+/* ************ PRODUCT SECTION CSS / COMMON OTHER SECTION CSS     *************** */
+
+
+.products-wrap{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 2rem 0;
+}
+
+.product{
+    background: linear-gradient(rgba(165, 165, 165, 0.05),rgba(165, 165, 165, 0.05));
+    box-shadow: 3px 3px 25px 1px rgba(0, 0, 0, 0.075);
+    border-radius: 0.75rem;
+    padding: 0.48rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 27rem;
+    width: 45%;
+    transition: all 0.7s ease;
+    /* transition-duration: 10s; */
+}
+
+.product:hover{
+    transform: scale(1.04);
+    box-shadow: 3px 3px 25px 1px rgba(0, 0, 0, 0.25);
+}
+
+.product-image{
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50rem;
+    object-fit: cover;
+    object-position: center;
+    box-shadow: 3px 3px 25px 1px rgba(0, 0, 0, 0.103);
+    
+    /* overflow: hidden; */
+
+}
+
+
+
+
+.product-desc-wrap{
+    margin: 0rem 2rem;
+
+}
+.product-name, .about-title, .event-title, .title{
+    font-size: 4rem;
+    letter-spacing: 1.6px;
+    color: #ff5f03;
+    margin: 1rem 0rem;
+    text-decoration: underline;
+}
+.product-desc{
+
+    font-size: 1.6rem;
+    letter-spacing: 1.7px;
+    font-family: 'Lobster', cursive;
+    font-weight: 100;
+}
+
+.price{
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin: 1rem 0rem;
+    color: #293241;
+}
+
+
+
+/* ***********  ABOUT US CSS     *************** */
+.about-us{
+    background: linear-gradient(rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.04));
+
+}
+.about-us-wrapper, .event{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 2rem;
+}
+.content-container, .event-content-wrapper{
+    width: 50%;
+}
+.about-content, .event-desc{
+    font-size: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 1.6px;
+    margin: 1rem 0;
+
+}
+.about-image{
+    width: 50rem;
+}
+
+
+
+
+/* ***********  EVENTS CSS     *************** */
+.events-wrapper{
+    display:flex;
+     width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.event{
+    background: linear-gradient(rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.04));
+    margin: 3rem 0;
+    box-shadow: 3px 3px 25px 1px rgba(0, 0, 0, 0.2);
+    width: 90%;
+}
+
+.event-image{
+    width:30rem;
+}
+
+.event-desc{
+    margin: 1rem 0rem 2rem 0;
+}
+
+
+/* *************   CONTACT US SECTION    *************** */
+.contact-us{
+    background: linear-gradient(rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.04));
+}
+
+.form-wrapper{
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+
+}
+
+.contact-image{
+    width: 35%;
+}
+
+.contact-image img{
+    height: 40rem;
+}
+
+.form-content{
+    background-color: white;
+    width: 55%;
+    padding: 1.5rem;
+}
+
+.contact-form input, textarea{
+    display: block;
+    width: 80%;
+    border: none;
+    border-bottom: 2px solid rgba(63, 63, 63, 0.527);
+    margin: 3rem;
+    padding: 1rem;
+    outline-color: none;
+    outline: none;
+    font-size: 1.6rem;
+}
+
+.contact-form a{
+    margin: 1rem 2rem;
+}
+
+
+/* *********    FOOTER CSS  ************** */
+
+.footer{
+    margin: 1rem 0;
+    background-color: #faa307;
+    color: #023047;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 1.6px;
+    height: 4rem;
+    
+}
+
+.footer-text{
+    padding: 1rem 0;
+    font-size: 1.7rem;
+
+    /* product css */
+}
+@media (max-width:1200px){
+    .products-wrap{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* flex-wrap: wrap; */
+        margin: 2rem 0;
+    }
+    .product{
+        margin: 2rem 0;
+        width: 90%;
+    }
+}
+/* about us and product css */
+@media (max-width:800px) {
+    *,html,*::after,*::before{
+        font-size: 8px;
+    }
+    .product-name, .about-title, .event-title, .title{
+        font-size: 3rem;
+    }
+    .about-us-wrapper, .event{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .content-container{
+        margin: 3rem 0;
+    }
+    .content-container, .event-content-wrapper{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .about-image{
+        width: 85vw;
+    }
+}
+
+@media (max-width:1000px) {
+    .item-wrap{
+        width: 60%;
+    }
+    
+}
+/* navigation logo */
+@media (max-width:900px){
+    .logo-full span{
+        display: none;
+    }
+    .logo{
+        height: 4.5rem;
+    }
+
+}
+
+/* contact us css */
+@media (max-width:492px) {
+    *,html,*::after,*::before{
+        font-size: 6px;
+    }
+    .product{
+        flex-direction: column;
+        height: 50rem;
+    }
+    .product-desc-wrap{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .product-desc{
+        text-align: center;
+    }
+
+    .form-wrapper{
+        flex-direction: column;
+        align-items: center;
+    }
+    .form-content{
+        margin: 1rem 0;
+        width: 100%;
+    }
+    .contact-image{
+        width: 90vw;
+    }
+    .center{
+        display: block;
+        text-align: center;
+        /* width: 15rem; */
+    }
+}
+
+
+
+/* navigation menu css */
+
+@media (max-width:650px) {
+    .navbar{
+        opacity: 0.90;
+    }
+    .navlist{
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-top: 5rem;
+    }
+    .navitem-wrapper{
+        width: 95%;
+        text-align: center;
+        margin-top: 6rem;
+    }
+    .navitem{
+        font-size: 4.5rem;
+    }
+    .logo-wrap{
+        order:2;
+        margin-right: 3rem;
+        margin-top: 0rem;
+        position: absolute;
+        top: 2%;
+        right: 3%;
+    }
+    .item-wrap{
+        flex-direction: column;
+        justify-content: flex-start;
+        order: 1;
+        background-color: white;
+        height: 100vh;
+        transform: translateX(-150%);
+        transition: transform 0.5s ease-in-out;
+    }
+
+    /* hamburger css */
+    .navbar input[type=checkbox]{
+        display: block;
+        position: absolute;
+        top: 33%;
+        z-index: 90;
+        left: 4%;
+        opacity: 0;
+    }
+
+    .hamburger-lines{
+        display: block;
+        position: absolute;
+        top: 33%;
+        left: 4%;
+        height: 3rem;
+        width: 3rem;
+    }
+
+    .line{
+        display: block;
+        margin-bottom: 2px;
+        border: 1px solid black;
+    }
+    .line1{
+        transform-origin: 33% 0%;
+        transition: transform 0.3s ease;
+    }
+    .line2{
+        
+        transition: display 0.3s ease;
+    }
+    .line3{
+        transform-origin: 38% 77%;
+        transition: transform 0.3s ease;
+    }
+    .navbar input[type=checkbox]:checked ~ .navlist > .item-wrap{
+        transform: translateX(0);
+    }
+    .navbar input[type=checkbox]:checked ~ .hamburger-lines .line1{
+        transform: rotate(45deg);
+    }
+    .navbar input[type=checkbox]:checked ~ .hamburger-lines .line2{
+        display: none;
+    }
+    .navbar input[type=checkbox]:checked ~ .hamburger-lines .line3{
+        transform: rotate(-45deg);
+    }
+    .item-wrap .btn{
+        font-size: 3.5rem;
+        padding: 0.5rem 1rem;
+        border-radius: 7rem;
+        color: rgb(255, 255, 255);
+    }
+
+}
+
+/* footer */
+@media (max-width:350px){
+    .footer-text{
+        font-size: 1.3rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
